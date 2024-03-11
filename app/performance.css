@@ -1,0 +1,175 @@
+#performance-content {
+    background-color: #333; 
+    color: #fff; 
+    margin-top: 60px; 
+    margin-left: 200px; 
+    padding: 20px; 
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px); 
+    display: none;
+    position: relative; 
+}
+
+.grades-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.grades-section div {
+    transition: background-color 0.3s;
+}
+
+.grades-section div:hover {
+    cursor: pointer;
+    background-color: #555; 
+}
+
+.breakdown-grades,
+.total-grades {
+    height: 30px;
+    line-height: 30px; 
+    background-color: #424242; 
+    padding: 20px;
+    border-radius: 8px; 
+    flex-basis: calc(50% - 10px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+
+
+#performance-content h3 {
+    color: #fff; 
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+    #performance-content {
+        margin-left: 0; 
+        padding: 10px; 
+    }
+
+    .grades-section {
+        flex-direction: column;
+    }
+
+    .breakdown-grades,
+    .total-grades {
+        flex-basis: auto; 
+        margin-bottom: 20px; 
+    }
+
+    .details {
+        position: static; 
+    }
+
+    .student-tabs button {
+        display: block;
+        width: 100%; 
+    }
+
+}
+
+
+.details {
+    display: none;
+    position: absolute; 
+    top: calc(100% + 10px); 
+    left: 0;
+    right: 0;
+    background-color: #302f2f; 
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 0; 
+    border-radius: 8px;
+}
+
+
+.student-tabs {
+    overflow: hidden;
+    background-color: #424242; 
+}
+
+.student-tabs button {
+    background-color: inherit;
+    float: left;
+    border: 1px solid #333;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    color: #fff; 
+}
+
+.student-tabs button:hover {
+    background-color: #555; 
+}
+
+.student-tabs button.active {
+    background-color: #333;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+    /*width: 1100px; */
+    height: 300px; 
+    display: none;
+    padding: 20px;
+    background-color: #302f2f; 
+    color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; 
+}
+
+.grades-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #424242; 
+    color: #fff; 
+    border-radius: 8px; 
+}
+
+.grades-table thead {
+    background-color: #555;
+}
+
+.grades-table th, .grades-table td {
+text-align: center; 
+padding: 15px;
+border-bottom: 1px solid #333; 
+}
+.grades-table th {
+font-weight: 600; 
+}
+
+.grades-table tbody tr:nth-child(odd) {
+background-color: #3b3b3b; 
+}
+
+.grades-table tbody tr:hover {
+background-color: #4e4e4e; 
+cursor: pointer;
+}
+
+
+.grades-table tbody td,
+.grades-table thead th {
+color: #ddd; 
+}
+
+
+.grades-table tbody tr:last-child td {
+border-bottom: none;
+}

@@ -1,0 +1,254 @@
+
+
+#daily-challenge-content {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px;
+    text-align: center; 
+}
+
+#daily-challenge-content h1 {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 15px;
+}
+
+#notification {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #2ecc71; 
+    color: #ffffff; 
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#weekly-challenges {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.challenge-card {
+    position: relative;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    flex: 1;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.challenge-card:hover {
+    transform: scale(1.1);
+}
+
+.answered:hover::before,
+.answered:hover::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.answered:hover::before {
+    background-color: rgba(0, 77, 0, 0.7); 
+    z-index: 1; /
+}
+
+.answered:hover::after {
+    content: "Answered!"; 
+    color: #ffffff; 
+    font-size: 18px; 
+    font-weight: bold;
+    z-index: 2; 
+}
+
+.unanswered:hover::before,
+.unanswered:hover::after {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.unanswered:hover::before {
+    background-color: rgba(153, 0, 0, 0.7); 
+    z-index: 1; 
+}
+
+.unanswered:hover::after {
+    content: "Unanswered!"; 
+    color: #ffffff; 
+    font-size: 18px; 
+    font-weight: bold;
+    z-index: 2; 
+}
+
+.day-name {
+    background-color: #404040; 
+    color: #888888;
+    cursor: not-allowed; 
+}
+
+#warning-message {
+    color: #ff0000; 
+    font-weight: bold;
+    margin-top: 10px;
+    display: none;
+}
+
+#message {
+    margin-top: 15px; 
+    font-weight: bold;
+}
+
+#riddle-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+#challenge-card p {
+    color: #ffffff; 
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.start-challenge-btn {
+    background-color: #007bff; 
+    color: #ffffff; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-challenge-btn:hover {
+    background-color: #0056b3;
+}
+
+#warning-message {
+    color: #ff6347; 
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#daily-challenge-answer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #383838; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    color: #e0e0e0; 
+}
+
+#close-riddle {
+    background-color: #e74c3c; 
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#close-riddle:hover {
+    background-color: #c0392b;
+}
+
+#ghicitoare-form {
+    margin-top: 15px;
+}
+
+#ghicitoare-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #b0b0b0; 
+}
+
+#ghicitoare-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #606060; 
+    border-radius: 5px;
+    color: #383838;
+    background-color: #e0e0e0;
+}
+
+#trimiteButton {
+    width: 100%;
+    background-color: #606060;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#trimiteButton:hover {
+    background-color: #4d4d4d;
+}
+
+#countdown {
+    color: #e0e0e0; 
+    margin-top: 10px;
+}
+
+#message {
+    color: #e74c3c; 
+    margin-top: 10px;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+
+
+#daily-challenge-answer.show,
+.overlay.show {
+    display: block;
+}

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tournament.css">
+    <link rel="stylesheet" href="./css/quiz/quiz.css">
+    <link rel="stylesheet" href="./css/quiz/results.css">
+    <link rel="stylesheet" href="./css/quiz/score.css">
+    <link rel="stylesheet" href="daily-challenge.css">
+    <link rel="stylesheet" href="leaderboards.css">
+    <link rel="stylesheet" href="achivement.css">
+</head>
+<body>
+    <div class="top-container">
+        
+        <input type="text" id="search-bar" placeholder="Search...">
+
+        
+        <footer>
+            <div id="score">Score: 100</div>
+        </footer>
+
+        
+        <header>
+            <img src="./images/profile_pic.jpg" alt="Profile Pic" id="profile-pic">
+        </header>
+    </div>
+
+    <div class="left-container">
+        
+        <ul>
+            <li class="menu-item" data-target="leaderboards-content">
+                <header>
+                    <img src="./images/leaderboard.png" alt="Leaderboards pic" id="leaderboards-pic"> 
+                </header>
+                <footer>
+                    <h4>Leaderboards</h4>
+                </footer>    
+            </li>
+            <li class="menu-item" data-target="daily-challenge-content">
+                <header>
+                    <img src="./images/challenge.png" alt="Daily challenge pic" id="daily-challenge-pic"> 
+                </header>
+                <footer>
+                    <h4>Daily challenge</h4>
+                </footer>    
+            </li>
+            <li class="menu-item" data-target="courses-content">
+                <header>
+                    <img src="./images/home.png" alt="Courses pic" id="courses-pic"> 
+                </header>
+                <footer>
+                    <h4>Courses</h4>
+                </footer>    
+            </li>
+            <li class="menu-item" data-target="tournament-content">
+                <header>
+                    <img src="./images/tournament.png" alt="tournament pic" id="tournament-pic"> 
+                </header>
+                <footer>
+                    <h4>Online tournament</h4>
+                </footer>    
+            </li>
+            <li class="menu-item" data-target="achivement-content">
+                <header>
+                    <img src="./images/achivement/achivement.png" alt="Achievement pic" id="achievement-pic"> 
+                </header>
+                <footer>
+                    <h4>Achivements</h4>
+                </footer>    
+            </li>
+        </ul>
+        
+    </div>
+
+    <div id="courses-content" class="main-container">
+        <h1>Welcome</h1>
+        <div class="course" data-target="sd-course">
+            <header>
+                
+            </header>
+            <footer>
+                <h3>Sisteme Distribuite</h3>
+            </footer>
+        </div>
+        <div id="sd-course" class="course-details" style="display: none;">
+            
+            <a href="https://dsrl.eu/courses/sd/materials/la10.pdf" target="_blank">Cursul 1</a><br>
+            <a href="#" id="activitatea1">Quiz 1</a><br>
+
+
+        </div>
+        <div class="course" data-target="piu-course">
+            <header>
+                
+            </header>
+            <footer>
+                <h3>Priectarea Interfetelor de Utilizator</h3>
+            </footer>
+        </div>
+        <div id="piu-course" class="course-details" style="display: none;">
+            
+            <a href="#">Activitatea 1</a><br>
+            <a href="#">Activitatea 1</a><br>
+            <a href="#">Activitatea 1</a><br>
+            <a href="#">Activitatea 1</a><br>
+            <a href="#">Activitatea 1</a><br>
+
+        </div>
+        <div class="course">
+            <header>
+                
+            </header>
+            <footer>
+                <h3>Proiectarea Retelelor de Calculatoare</h3>
+            </footer>    
+        </div>
+        <div class="course">
+            <header>
+                
+            </header>
+            <footer>
+                <h3>Priectarea Translatoarelor</h3>
+            </footer>
+        </div>
+    </div>
+
+    <div id="leaderboards-content" class="content-div" style="display: none;">
+        
+        <h1>Top 10</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/johnny.png" alt="Profile">
+                                <span class="name">John Doe</span>
+                                <div class="tooltip">
+                                    <p>Status: recently active</p>
+                                    <p>Group: 30237</p>
+                                    <p>Today's riddle: solved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>95</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/jane.png" alt="Profile">
+                                <span class="name">Jane Smith</span>
+                                <div class="tooltip">
+                                    <p>Status: recently active</p>
+                                    <p>Group: 30237</p>
+                                    <p>Today's riddle: solved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>88</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/bob.png" alt="Profile">
+                                <span class="name">Bob Johnson</span>
+                                <div class="tooltip">
+                                    <p>Status: online</p>
+                                    <p>Group: 30237</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/alice.png" alt="Profile">
+                                <span class="name">Alice Brown</span>
+                                <div class="tooltip">
+                                    <p>Status: recently active</p>
+                                    <p>Group: 30235</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/charlie.png" alt="Profile">
+                                <span class="name">Charlie Davis</span>
+                                <div class="tooltip">
+                                    <p>Status: offline</p>
+                                    <p>Group: 30238</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/eva.png" alt="Profile">
+                                <span class="name">Eva White</span>
+                                <div class="tooltip">
+                                    <p>Status: online</p>
+                                    <p>Group: 30237</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/olivia.png" alt="Profile">
+                                <span class="name">Olivia Mitchell</span>
+                                <div class="tooltip">
+                                    <p>Status: recently active</p>
+                                    <p>Group: 30235</p>
+                                    <p>Today's riddle: solved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/liam.png" alt="Profile">
+                                <span class="name">Liam Anderson</span>
+                                <div class="tooltip">
+                                    <p>Status: offline</p>
+                                    <p>Group: 30236</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>55</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/sophia.png" alt="Profile">
+                                <span class="name">Sophia Reynolds</span>
+                                <div class="tooltip">
+                                    <p>Status: offline</p>
+                                    <p>Group: 30236</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>
+                            <div class="profile-info">
+                                <img id="profile-image" src="./images/noah.png" alt="Profile">
+                                <span class="name">Noah Carter</span>
+                                <div class="tooltip">
+                                    <p>Status: offline</p>
+                                    <p>Group: 30238</p>
+                                    <p>Today's riddle: unsolved</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>45</td>
+                    </tr>
+                    
+                </tbody>
+            </table> 
+        </div>
+           
+            <div>
+                <h2>My Stats</h2>
+                <div id="myStats">
+                    <div class="stat-card">
+                        <div class="image-container">
+                            <img src="./images/rank.png" alt="Rank">
+                        </div>
+                        <h3 class="centered-title">Rank</h3>
+                        <p>Place: 6th</p>
+                        <p>Score: 60</p>
+                       
+                    </div>
+                    <div class="stat-card">
+                        <div class="image-container">
+                            <img src="./images/streak.png" alt="Streak">
+                        </div>
+                        <h3>Streak</h3>
+                        <p>Active days in a row: 5</p>
+                        
+                    </div>
+                
+                    <div class="stat-card">
+                        <div class="image-container">
+                            <img src="./images/quiz.png" alt="Quizzes">
+                        </div>
+                        <h3>Quizzes</h3>
+                        <p>Completed: 9</p>
+                        <p>GPA: 7.56</p>
+                        
+                    </div>
+    
+                    <div class="stat-card">
+                        <div class="image-container">
+                            <img src="./images/riddle.png" alt="Riddles">
+                        </div>
+                        <h3>Riddles</h3>
+                        <p id="riddlesText">Completed: 0</p>
+                       
+                    </div>
+    
+                    <div class="stat-card">
+                        <div class="image-container">
+                            <img src="./images/badge.png" alt="Badges">
+                        </div>
+                        <h3>Badges</h3>
+                        <p>Unlocked: 2</p>
+                        <p>Locked: 18</p>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <div id="daily-challenge-content" class="content-div" style="display: none;">
+        <div id="weekly-challenges">
+            
+            <div class="challenge-card current-day unanswered">
+                <h3>Monday</h3>
+                <p>"What is always in front of everyone, but never touches the ground?"</p>
+                <p>Inactive</p>
+            </div>
+            
+            <div id="current-day-riddle" class="challenge-card unanswered">
+                <h3>Tuesday</h3>
+                <p>"What can be broken, but cannot be repaired?"</p>
+                <p>Active</p>
+            </div>
+            
+            <div class="challenge-card day-name">
+                <h2>Wednesday</h2>
+            </div>
+            
+            <div class="challenge-card day-name">
+                <h2>Thursday</h2>
+            </div>
+            
+            <div class="challenge-card day-name">
+                <h2>Friday</h2>
+            </div>
+         
+            <div class="challenge-card day-name">
+                <h2>Saturday</h2>
+            </div>
+            
+            <div class="challenge-card day-name">
+                <h2>Sunday</h2>
+            </div>
+               
+        </div>
+        <br><br>
+        <div id="riddle-container">
+            <h1>Today's riddle</h1>
+            <p>"What can be broken, but cannot be repaired?"</p>
+            <button id="start-challenge-btn" class="start-challenge-btn" onclick="showDailyChallengePopUp()">Start daily challenge</button>
+            <div id="warning-message">Your answer has been sent!</div>
+        </div> 
+        <div class="overlay" onclick="closeDailyChallengePopUp()"></div>           
+        <div id="daily-challenge-answer">
+           
+            <button id="close-riddle" onclick="closeDailyChallengePopUp()">X</button>
+            
+            <form id="ghicitoare-form" action="procesare_raspuns.php" method="post">
+                <label for="raspuns">Your answer:</label>
+                <input type="text" id="raspuns" name="raspuns" required>
+                <button type="submit" id="trimiteButton">Submit</button>
+            </form>
+            <br>
+            
+            <div id="countdown"></div>
+            
+            <div id="message"></div>
+        </div>
+    </div>
+
+   
+    <div id="notification" class="notification">
+        The answer has been successfully submitted!
+    </div>
+
+    <div id="tournament-content" class="content-div" style="display: none;">
+        <script src="/tournament.js"></script>
+        <div id="tournament-container">
+            <div id="tournament-header">
+                <h1>Online tournament</h1>
+            </div>
+    
+            <div id="tournament-body" style="text-align: center;">
+                <div class="square" onclick="handleClick(1)">
+                    <header>
+                        <img src="./images/magic-wand.png" alt="Create team" class="centered-image">
+                        <h2>Join tournament</h2>
+                    </header>
+                    <footer class="tournament-description">
+                        <h5>Description: General knowledge</h5>
+                    </footer>
+                </div>
+                
+                <div class="square" onclick="handleClick(2)">
+                    <header>
+                        <img src="./images/cpu.png" alt="Create team" class="centered-image">
+                        <h2>Hardware</h2>
+                    </header>
+                    <footer class="tournament-description">
+                        <h5>Description: Hardware tournament</h5>
+                    </footer>
+                </div>
+                
+                <div class="square" onclick="handleClick(3)">
+                    <header>
+                        <img src="./images/math.png" alt="Create team" class="centered-image">
+                        <h2>Math</h2>
+                    </header>
+                    <footer class="tournament-description">
+                        <h5>Description: Math tournament</h5>
+                    </footer>
+                </div>
+                
+                <div class="square" onclick="handleClick(4)">
+                    <header>
+                        <img src="./images/programming.png" alt="Create team" class="centered-image">
+                        <h2>Programming</h2>
+                    </header>
+                    <footer class="tournament-description">
+                        <h5>Description: Programming tournament</h5>
+                    </footer>
+                </div>
+                
+                <div class="square" onclick="handleClick(5)">
+                    <header>
+                        <img src="./images/interface.png" alt="Create team" class="centered-image">
+                        <h2>Interface</h2>
+                    </header>
+                    <footer class="tournament-description">
+                        <h5>Description: Interface tournament</h5>
+                    </footer>
+                </div>
+                
+                
+            </div>
+         </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal-container" id="modalContainer">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to leave?</p>
+            <button onclick="confirmLeave()">Yes</button>
+            <button onclick="cancelLeave()">No</button>
+        </div>
+    </div>
+
+
+        
+        <div id="quizPopup-quiz-cpe" class="popup-quiz-container-cpe" style="display: none;">
+            <div class="popup-quiz-content-cpe">
+                <!-- <span class="close-btn-cpe" onclick="closePopupCpe()">&times;</span> -->
+    
+                <div id="inner-popup-cpe" class="inner-popup-cpe">
+                    <h2>Quiz Title</h2>
+                    <button class="start-quiz-btn-cpe" onclick="startQuizCpe()">Start Quiz Now</button>
+                </div>
+    
+                <div id="quiz-container-cpe" style="display: none;">
+                    <div id="question-counter-cpe">1 / 50</div>
+                    <div id="question-cpe"></div>
+                    <ul id="choices-cpe">
+    
+                    </ul>
+                    <button id="submit-answer-button-cpe" disabled>Submit Answer</button>
+                    <button id="next-question-button-cpe" style="display: none;">Next Question</button>
+                    <button id="finish-button-cpe" style="display: none;">Finish</button>
+                    <div id="feedback-cpe"></div>
+                    <div id="score-cpe">Correct answers: 0</div>
+                </div>
+    
+                <div id="final-score-card-cpe" style="display: none;">
+                    <div class="card-cpe">
+                        <h1>Congratulations!</h1>
+                        <p id="correct-answers-cpe">Correct Answers: <span></span></p>
+                        <p id="final-score-cpe">Final Score: <span></span></p>
+                        <p id="final-grade-cpe">Grade: <span></span> / 10</p>
+                        <button id="view-results-button-cpe">View Results</button>
+                    </div>
+                </div>
+    
+                <div id="results-container-cpe" style="display: none;"></div>
+    
+                <div id="feedback-popup-cpe" class="feedback-popup-cpe" style="display: none;">
+                    <div class="feedback-content-cpe">
+                        <span class="close-feedback-btn-cpe" onclick="closeFeedbackPopupCpe()">&times;</span>
+                        <h2>Your Feedback</h2>
+                        <textarea id="feedback-textarea-cpe" rows="5" placeholder="Write your feedback here..."></textarea>
+                        <button id="submit-feedback-button-cpe" onclick="submitFeedbackCpe()">Submit Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="achivement-content" class="content-div" style="display: none;">
+            <h2>Achievements</h2>
+            <div class="achievements-container">
+              
+                <div class="achievement unlocked">
+                    <img src="./images/achivement/speed.png" alt="Achievement Icon">
+                    <p>Fastest Learner</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Be the first person to finish a course.')">Details</button>
+                </div>
+                <div class="achievement unlocked">
+                    <img src="./images/achivement/trophy1.png" alt="Achievement Icon">
+                    <p>TOP 1 CLASS</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Achievement details here')">Details</button>
+                </div>
+                <div class="achievement unlocked">
+                    <img src="./images/achivement/trophy2.png" alt="Achievement Icon">
+                    <p>TOP 2 CLASS</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Achievement details here')">Details</button>
+                </div>
+                <div class="achievement unlocked">
+                    <img src="./images/achivement/trophy3.png" alt="Achievement Icon">
+                    <p>TOP 3 CLASS</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Achievement details here')">Details</button>
+                </div>
+                <div class="achievement unlocked">
+                    <img src="./images/achivement/mile5.png" alt="Achievement Icon">
+                    <p>Mile 5</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Achievement details here')">Details</button>
+                </div>
+        
+               
+                <div class="achievement locked">
+                    <img src="./images/achivement/mile10.png" alt="Locked Achievement Icon" class="locked-icon">
+                    <p>Mile 10</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Locked Achievement details here')">Details</button>
+                </div>
+                <div class="achievement locked">
+                    <img src="./images/achivement/mile25.png" alt="Locked Achievement Icon" class="locked-icon">
+                    <p>Mile 25</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Locked Achievement details here')">Details</button>
+                </div>
+                <div class="achievement locked">
+                    <img src="./images/achivement/mile50.png" alt="Locked Achievement Icon" class="locked-icon">
+                    <p>Mile 50</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Locked Achievement details here')">Details</button>
+                </div>
+                <div class="achievement locked">
+                    <img src="./images/achivement/mile75.png" alt="Locked Achievement Icon" class="locked-icon">
+                    <p>Mile 75</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Locked Achievement details here')">Details</button>
+                </div>
+                <div class="achievement locked">
+                    <img src="./images/achivement/mile100.png" alt="Locked Achievement Icon" class="locked-icon">
+                    <p>Mile 100</p>
+                    <button class="achievement-btn" onclick="showAchievementDetails('Locked Achievement details here')">Details</button>
+                </div>
+    
+        
+               
+            </div>
+        </div>
+    
+        <div id="popup-container" class="popup-container" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p id="popup-text">Details go here...</p>
+        </div>
+    </div>
+
+
+
+
+    
+    <script src="/index.js"></script>
+    <script src="/quiz.js"></script>
+    <script src="/daily-challenge.js"></script>
+    <script src="/achivement.js"></script>
+</body>
+</html>

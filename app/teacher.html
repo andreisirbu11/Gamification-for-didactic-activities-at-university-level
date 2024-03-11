@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="create_activity.css">
+    <link rel="stylesheet" href="teacher-courses.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="performance.css">
+</head>
+
+<body>
+    <div class="top-container">
+        
+        <input type="text" id="search-bar" placeholder="Search...">
+
+        <footer>
+            <div id="name" class="teacher">Mr./Mrs. Teacher</div>
+        </footer>
+
+        <header>
+            <img src="./images/teacher.png" alt="Profile Pic" id="profile-pic">
+        </header>
+    </div>
+
+    <div class="left-container">
+       
+        <ul>
+            <li class="menu-item" data-target="performance-content">
+                <header>
+                    <img src="./images/performance.png" alt="Performance pic" id="leaderboards-pic">
+                </header>
+                <footer>
+                    <h4>Performance</h4>
+                </footer>
+            </li>
+            <li class="menu-item" data-target="feedback-content">
+                <header>
+                    <img src="./images/feedback.png" alt="feedback pic" id="feedback-pic">
+                </header>
+                <footer>
+                    <h4>View feedback</h4>
+                </footer>
+            </li>
+            <li class="menu-item" data-target="courses-content">
+                <header>
+                    <img src="./images/home.png" alt="Courses pic" id="courses-pic">
+                </header>
+                <footer>
+                    <h4>Courses</h4>
+                </footer>
+            </li>
+            <li class="menu-item" data-target="create-content-cpe">
+                <header>
+                    <img src="./images/online-activity.png" alt="Create pic" id="create-pic">
+                </header>
+                <footer>
+                    <h4>Create Activity</h4>
+                </footer>
+            </li>
+        </ul>
+        
+    </div>
+
+
+    <div id="performance-content" class="content-div">
+        <h2>Performance</h2>
+        <div class="grades-section">
+            <div id="breakdown-grades" class="breakdown-grades">
+                <h3>Breakdown of student grades</h3>
+            </div>
+            <div id="total-grades" class="total-grades">
+                <h3>Averages for student grades</h3>
+            </div>
+            <div id="breakdown-details" class="details">
+                <div class="student-tabs">
+                    <button class="tab" onclick="openTab(event, 'Alice')">Alice</button>
+                    <button class="tab" onclick="openTab(event, 'Bob')">Bob</button>
+                    <button class="tab" onclick="openTab(event, 'Charlie')">Charlie</button>
+                    <button class="tab" onclick="openTab(event, 'Diana')">Diana</button>
+                    <button class="tab" onclick="openTab(event, 'Edward')">Edward</button>
+                </div>
+
+                <div id="Alice" class="tab-content">
+                    <canvas id="aliceChart" class="chart-canvas"></canvas>
+                </div>
+                <div id="Bob" class="tab-content" style="display:none;">
+                    <canvas id="bobChart" class="chart-canvas"></canvas>
+                </div>
+                <div id="Charlie" class="tab-content" style="display:none;">
+                    <canvas id="charlieChart" class="chart-canvas"></canvas>
+                </div>
+                <div id="Diana" class="tab-content" style="display:none;">
+                    <canvas id="dianaChart" class="chart-canvas"></canvas>
+                </div>
+                <div id="Edward" class="tab-content" style="display:none;">
+                    <canvas id="edwardChart" class="chart-canvas"></canvas>
+                </div>   
+            </div>
+            <div id="total-details" class="details">
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Average Grade</th>
+                            <th>Best Grade</th>
+                            <th>Worst Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>7.5</td>
+                            <td>10</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>6.8</td>
+                            <td>9</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Charlie</td>
+                            <td>5.0</td> 
+                            <td>8</td>   
+                            <td>2</td>   
+                        </tr>
+                        <tr>
+                            <td>Diana</td>
+                            <td>6.0</td> 
+                            <td>7</td>   
+                            <td>3</td>   
+                        </tr>
+                        <tr>
+                            <td>Edward</td>
+                            <td>3.0</td>
+                            <td>5</td>   
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="feedback-content" class="content-div" style="display: none;">
+        <h2>Feedback</h2>
+        <div class="buttonDiv">
+            <div class="container">
+                <span onclick="showContent('guide')">
+                    <img src="./images/guide.png" alt="Materials">
+                    <p>Guide</p>
+                </span>
+            </div>
+            <div class="container">
+                <span onclick="showContent('materials')">
+                    <img src="./images/classrom.png" alt="Materials">
+                    <p>Materials</p>
+                </span>
+            </div>
+            <div class="container">
+                <span onclick="showContent('quizzes')">
+                    <img src="./images/quizzes.png" alt="Quizzes">
+                    <p>Quizzes</p>
+                </span>
+            </div>
+            <div class="container">
+                <span onclick="showContent('optimization')">
+                    <img src="./images/optimization.png" alt="Optimization">
+                    <p>Optimization</p>
+                </span>
+            </div>
+        </div>
+
+        <div id="studentFeedback" class="studentFeedback-div">
+            <h2>Guide</h2>
+            <div class="title">
+                <p>Select a section to see student feedback.</p>
+                <p>You can mark the feedback as noted.</p>
+                <p>In the Optimization section you can see the noted feedback and if you click on it you can delete it</p>
+            </div> 
+        </div>
+        
+    </div>
+        
+    <div class="overlay" id="overlay"></div>
+
+    <div class="overlay-AS" id="overlay-AS"></div>
+
+    <div class="modal-container" id="modalContainer">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="create-content-cpe" class="content-div" style="display: none;">
+        <h1>Create Activity</h1>
+        <div class="create-options-container-cpe">
+            <div class="create-option-cpe" onclick="openCreateTournamentModalCpe()">
+                <img src="./images/tournament.png" alt="Tournament">
+                <p>Create Tournament</p>
+            </div>
+            <div class="create-option-cpe" onclick="openCreateQuizModalCpe()">
+                <img src="./images/choose.png" alt="Quiz">
+                <p>Create Quiz</p>
+            </div>
+            <div class="create-option-cpe" onclick="openCreateDailyQuizModalCpe()">
+                <img src="./images/daily-quiz-create.png" alt="Daily Quiz">
+                <p>Daily Quiz</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="create-quiz-modal-cpe" class="modal-cpe" style="display: none;">
+        <div class="modal-content-cpe">
+            <span class="close-modal-cpe" onclick="closeCreateQuizModalCpe()">&times;</span>
+            <h2>Create a New Quiz</h2>
+            <form id="create-quiz-form-cpe">
+                <input type="text" id="quiz-question-cpe" placeholder="Question" name="quizQuestion" required />
+                <div id="answer-container-cpe">
+                   
+                </div>
+                <button type="button" onclick="addAnswerCpe()">Add Answer</button>
+                <button type="button" id="next-question-btn-cpe" onclick="nextQuestionCpe()">Next Question</button>
+                <button type="submit">Create Quiz</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="quiz-summary-modal-cpe" class="modal-cpe" style="display: none;">
+        <div class="modal-content-cpe">
+            <span class="close-modal-cpe" onclick="closeQuizSummaryModalCpe()">&times;</span>
+            <h2>Quiz Summary</h2>
+            <div id="quiz-summary-content-cpe">
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="create-daily-quiz-modal-cpe" class="modal-cpe" style="display: none;">
+        <div class="modal-content-cpe">
+            <span class="close-modal-cpe" onclick="closeCreateDailyQuizModalCpe()">&times;</span>
+            <h2>Create Daily Quiz</h2>
+            <form id="create-daily-quiz-form-cpe">
+                <input type="date" id="daily-quiz-date-cpe" name="dailyQuizDate" required />
+                <textarea id="daily-quiz-question-cpe" placeholder="Enter your question here..." required></textarea>
+                <input type="text" id="daily-quiz-answer-cpe" placeholder="Correct Answer" required />
+                <button type="submit">Create Daily Quiz</button>
+            </form>
+        </div>
+    </div>
+
+  
+    <div id="create-tournament-modal-cpe" class="modal-cpe" style="display: none;">
+        <div class="modal-content-cpe">
+            <span class="close-modal-cpe" onclick="closeCreateTournamentModalCpe()">&times;</span>
+            <h2>Create Tournament</h2>
+            <form id="create-tournament-form-cpe">
+                <label for="tournament-title-cpe">Tournament Title:</label>
+                <input type="text" id="tournament-title-cpe" placeholder="Enter tournament title" name="tournamentTitle"
+                    required />
+
+                <label for="tournament-description-cpe">Description:</label>
+                <textarea id="tournament-description-cpe" placeholder="Describe the tournament..." required></textarea>
+
+                <label for="tournament-icon-cpe">Tournament Icon:</label>
+                <input type="file" id="tournament-icon-cpe" name="tournamentIcon" accept="image/*" />
+
+                <button type="button" onclick="nextCreateTournamentCpe()">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="add-question-modal-cpe" class="modal-cpe" style="display: none;">
+        <div class="modal-content-cpe">
+            <span class="close-modal-cpe" onclick="closeAddQuestionModalCpe()">&times;</span>
+            <h2>Add Question</h2>
+            <form id="add-question-form-cpe">
+                <textarea id="question-text-cpe" placeholder="Enter your question here..." required></textarea>
+
+                <label class="switch">
+                    <input type="checkbox" id="toggle-answer-type-cpe">
+                    <span class="slider round"></span>
+                </label>
+                <p>Toggle for text answer or picture answers</p>
+
+                <div id="text-answer-cpe">
+                    <input type="text" id="text-answer-input-cpe" placeholder="Enter the correct answer" />
+                </div>
+
+                <div id="picture-answers-cpe" style="display: none;">
+                    <input type="file" id="picture-answer-1-cpe" accept="image/*" />
+                    <label for="picture-answer-1-cpe">Picture for answer 1</label>
+                    <input type="file" id="picture-answer-2-cpe" accept="image/*" />
+                    <label for="picture-answer-2-cpe">Picture for answer 2</label>
+                </div>
+
+                <button type="button" id="add-next-question-btn-cpe" onclick="addNextQuestionCpe()">Next
+                    Question</button>
+                <button type="button" id="finish-creating-tournament-btn-cpe"
+                    onclick="finishCreatingTournamentCpe()">Finish Tournament</button>
+
+
+                
+            </form>
+        </div>
+    </div>
+
+    <div id="courses-content" class="main-container">
+        
+        <div class="toolbar">
+            <div id="add-course">
+                <img src="./images/add-course.png">
+                <p>Add a New Course</p>
+            </div>
+        </div>
+         
+        <div id="courses">
+           
+            <div class="course-card" id="piu" onclick="openPIU()">
+                <h2>Proiectarea Interfetelor de Utilizator</h2>
+                <p>2023/2024</p>
+               
+            </div>
+        </div>
+        
+        <div id="courses-overlay" class="courses-overlay"></div>
+        <div id="add-course-pop-up" class="popup">
+            <div class="pop-up-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <label for="course-name">Course name:</label>
+                <input type="text" id="course-name">
+    
+                <label for="year">Year:</label>
+                <input type="text" id="year">
+    
+                <button onclick="addCourse()">Adaugă curs</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="piu-content" class="content-div" style="display: none;">
+        
+        <div class="course-description-card">
+            <h2>Proiectarea Interfetelor de Utilizator</h2>
+            <p>Descrierea cursului: Acest curs se axează pe proiectarea interfețelor de utilizator...</p>
+            
+        </div>
+        <div class="participants-wrapper">
+            <div id="search-participants">
+                <input type="text" id="search-input" onkeyup="searchParticipants()" placeholder="Search participants...">
+            </div>
+            
+            <div class="participants-container">
+                <ul id="participants-list">
+                    <li>
+                        <img src="./images/user.png" alt="AS">
+                        <p>Andrei Sirbu</p>
+                    </li>
+                    <li>
+                        <img src="./images/user.png" alt="CP">
+                        <p>Ciprian Peter</p>
+                    </li>
+                    <li>
+                        <img src="./images/user.png" alt="RC">
+                        <p>Robert Ciupe</p>
+                    </li>
+                    <li>
+                        <img src="./images/user.png" alt="GN">
+                        <p>Gabriel Nita</p>
+                    </li>
+                </ul>    
+            </div>
+            <div id="add-participants">
+                <button onclick="openAddParticipantModal()">Add Participants</button>
+            </div>
+        </div>
+        
+        <div class="announcements-section">
+            <h2>Announcements</h2>
+             
+             <p class="announcement-info">
+                
+                <img src="./images/teacher.png" alt="Profesor" class="professor-image">
+                <span class="professor-name">Professor X</span> 
+                <span class="announcement-date">January 15, 2024</span> 
+             </p>
+             
+            <div class="announcement-box">
+                
+                <div class="announcement-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="course-list-section">
+            <ul class="course-list">
+                <li class="course-item">
+                    <span class="course-name">Course 1</span>
+                    <input type="file" class="upload-button" accept=".pdf, .doc, .docx">
+                </li>
+                
+                <li class="course-item">
+                    <span class="course-name">Course 2</span>
+                    <input type="file" class="upload-button" accept=".pdf, .doc, .docx">
+                </li>
+                <li class="course-item">
+                    <span class="course-name">Course 2</span>
+                    <input type="file" class="upload-button" accept=".pdf, .doc, .docx">
+                </li>
+                <li class="course-item">
+                    <span class="course-name">Course 2</span>
+                    <input type="file" class="upload-button" accept=".pdf, .doc, .docx">
+                </li>
+                
+                
+            </ul>
+        </div>        
+    </div>
+
+    <div id="addParticipantModal">
+        <div class="search-container">
+            <input type="text" id="searchStudent" placeholder="Search students...">
+        </div>
+        <ul class="student-list" id="studentList">
+            
+            <li data-name="Cristian B"><p>Cristian B</p><button class="add-button" onclick="addParticipant('Cristian B')">Add</button></li>
+            <li data-name="Andrei T"><p>Andrei T</p><button class="add-button" onclick="addParticipant('Andrei T')">Add</button></li>
+            <li data-name="Damian S"><p>Damian S</p><button class="add-button" onclick="addParticipant('Damian S')">Add</button></li>
+            
+        </ul>
+        <button id="close-modal" onclick="closeAddParticipantModal()">Close</button>
+    </div>
+
+
+
+
+    <script src="/index.js"></script>
+    <script src="/feedback.js"></script>
+    <script src="/create_activity.js"></script>
+    <script src="/dailyquiz.js"></script>
+    <script src="./teacher-courses.js"></script>
+    <script src="/performance.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>

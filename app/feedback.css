@@ -1,0 +1,94 @@
+.teacher{
+    background-color: #424242; 
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.buttonDiv {
+    display: inline-flex;
+    font-weight: bold;
+}
+
+.container{
+    padding: 10px;
+    background-color: #424242;
+    border-radius: 20px;
+    width: 150px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+.container:hover{
+    background-color: #484848;
+}
+
+
+.buttonDiv span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonDiv span img {
+    margin-top: 6px;
+    max-width: 50%;
+    height: 50%;
+}
+
+.checkmark-icon {
+    float: right;
+    visibility: hidden;
+    
+    
+}
+
+.feedback-container.clicked .checkmark-icon {
+    visibility: visible;
+}
+
+
+.img-container img{
+    width: 40px; 
+    height: 40px;
+    object-fit: cover;  
+    margin-left: 50px;
+  
+}
+
+.feedback-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #424242;
+    padding: 15px;
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    color: #f0f0f0; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-container:hover {
+    background-color: #484848;
+}
+
+.custom-modal {
+    position: fixed;
+    bottom: 15px; 
+    right: 10px; 
+    background-color: #050000;
+    border: 1px solid #0f0000;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px; 
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #f0f0f0;
+}

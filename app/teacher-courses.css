@@ -1,0 +1,137 @@
+#courses-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+#courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px;
+}
+
+.course-card {
+    flex-basis: calc(45% - 20px);
+    margin: 10px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-card:hover {
+    background-color: #555; 
+    cursor: pointer; 
+}
+
+.add-course-card:hover {
+    background-color: #333; 
+    cursor: pointer; 
+}
+
+#add-course {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#add-course:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#add-course img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#add-course p {
+    margin: 0;
+    color: #fff;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    z-index: 1000;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.close:hover {
+    color: #ddd;
+}
+
+label {
+    color: #ccc;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    width: calc(100% - 16px); 
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff; 
+    border-radius: 5px; 
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.courses-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+
+#add-course-pop-up.show,
+.courses-overlay.show {
+    display: block;
+}

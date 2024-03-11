@@ -1,0 +1,243 @@
+.popup-container-cpe {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.popup-content-cpe {
+    border-radius: 5px;
+    height: 70%; /* Setează înălțimea mai mare pentru popup */
+    width: 70%; /* Facem popup-ul mai lat */
+    background-color: #333; /* Culoarea de fundal a temei tale */
+    width: 50%; /* Lățimea popup-ului */
+    max-width: 500px; /* Lățimea maximă */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Umbră pentru a evidenția popup-ul */
+    opacity: 0.95; /* Ușor transparent */
+   
+    max-width: 800px; /* Și îi stabilim o lățime maximă mai mare */
+    padding: 40px; /* Mai mult spațiu în interior */
+
+    display: flex; /* Folosește flexbox pentru conținutul interior */
+    flex-direction: column; /* Elemente aranjate vertical */
+    align-items: center; /* Centrează elementele pe axa transversală */
+
+}
+
+.close-btn-cpe {
+    position: absolute; /* Setează poziționarea absolută */
+    top: 10px; /* Poziționează la 10px de partea de sus */
+    right: 10px; /* Poziționează la 10px de partea dreaptă */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff; /* Culoare pentru butonul de închidere */
+}
+
+.inner-popup-cpe {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    color: #fff;
+    background-color: #424242;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.start-quiz-btn-cpe{
+    margin-top: 100px;
+    background-color: #5cb85c; /* O culoare verde pentru buton */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+}
+
+.start-quiz-btn-cpe:hover {
+    background-color: #4cae4c; /* Un verde puțin mai închis la hover */
+}
+
+.popup-container-quiz-cpe {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.popup-content-quiz-cpe {
+    border-radius: 5px;
+    height: 70%; /* Setează înălțimea mai mare pentru popup */
+    width: 70%; /* Facem popup-ul mai lat */
+    background-color: #333; /* Culoarea de fundal a temei tale */
+    width: 50%; /* Lățimea popup-ului */
+    max-width: 500px; /* Lățimea maximă */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Umbră pentru a evidenția popup-ul */
+    opacity: 0.95; /* Ușor transparent */
+   
+    max-width: 800px; /* Și îi stabilim o lățime maximă mai mare */
+    padding: 40px; /* Mai mult spațiu în interior */
+}
+
+.close-btn-quiz-cpe {
+    position: absolute; /* Setează poziționarea absolută */
+    top: 10px; /* Poziționează la 10px de partea de sus */
+    right: 10px; /* Poziționează la 10px de partea dreaptă */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff; /* Culoare pentru butonul de închidere */
+}
+
+.submit-quiz-btn-cpe {
+    margin-top: 100px;
+    background-color: #5cb85c; /* O culoare verde pentru buton */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+}
+
+/* Asigură-te că ajustezi dimensiunile sau alte proprietăți dacă este necesar */
+
+
+/*=================================================================================*/
+
+
+#quiz-container-cpe {
+    width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#question-counter-cpe  {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+
+#question-cpe  {
+    color: #009999;
+    font-weight: bold; 
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#choices-cpe  {
+    list-style-type: none;
+    padding: 0;
+}
+
+#choices-cpe li {
+    padding: 10px;
+    background-color: #e4e4e4;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#choices-cpe li:hover {
+    background-color: #d4d4d4;
+}
+
+#submit-answer-button-cpe ,
+#next-question-button-cpe ,
+#finish-button-cpe  {
+    width: 100%; 
+    padding: 10px;
+    background-color: #009999; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* font-weight: bold;  */
+    transition: background-color 0.3s;
+}
+
+
+#submit-answer-button-cpe:hover,
+#next-question-button-cpe:hover,
+#finish-button-cpe:hover {
+    background-color: #007377;
+}
+
+#score-cpe {
+    margin-top: 20px;
+}
+
+
+
+#choices-cpe li.selected {
+    background-color: rgb(112, 126, 129);
+    color: white;
+}
+
+#choices-cpe li.correct {
+    background-color: green;
+    color: white;
+}
+
+#choices-cpe li.incorrect {
+    background-color: red;
+    color: white;
+}
+
+#choices-cpe li.no-hover {
+    pointer-events: none;
+    opacity: 0.6; 
+}
+
+
+
+.popup-quiz-container-cpe {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.popup-quiz-content-cpe {
+    /* position: relative; */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    max-width: 800px; 
+    height: 70%; 
+    width: 70%; 
+    background-color: #949494e7;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    padding: 40px; 
+    overflow-y: auto;
+}
+
